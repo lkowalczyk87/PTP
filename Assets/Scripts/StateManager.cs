@@ -7,7 +7,7 @@ public class StateManager : MonoBehaviour
     // ENCAPSULATION
     public static StateManager Instance { get; private set; }
 
-    public int playerType;
+    public int playerType { get; private set; }
 
     void Awake()
     {
@@ -23,5 +23,9 @@ public class StateManager : MonoBehaviour
 
     }
 
-
+    public void SetPlayer(int newPlayerType)
+    {
+        if (newPlayerType < 0 || newPlayerType > 1) return;
+        Instance.playerType = newPlayerType;
+    }
 }
