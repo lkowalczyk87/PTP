@@ -25,6 +25,7 @@ public class PlayerBullet : MonoBehaviour
         Move(direction);
     }
 
+    // ABSTRACTION
     protected virtual void Move(float direction) {
         rb.velocity = new Vector3(speed * direction, 0, 0);
     }
@@ -38,6 +39,7 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     private void GetHit()
     {
         --hp;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class BlueBullet : PlayerBullet
 {
     [SerializeField]
@@ -21,12 +22,7 @@ public class BlueBullet : PlayerBullet
         base.Start();
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
-
+    // POLYMORPHISM
     protected override void Move(float direction)
     {
         ResetFullSpeed(direction);
